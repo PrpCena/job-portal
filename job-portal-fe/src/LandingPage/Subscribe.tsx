@@ -2,27 +2,30 @@ import { Button, TextInput } from "@mantine/core";
 
 const Subscribe = () => {
   return (
-    <div className="bg-mine-shaft-900 py-10">
-      <div className="max-w-5xl mx-auto bg-mine-shaft-800 rounded-xl shadow-lg p-8">
-        <div className="flex items-center justify-between gap-8">
-          <div className="flex-1">
-            <h2 className="text-4xl font-bold text-white leading-tight">
+    <div className="bg-mine-shaft-900 py-24">
+      <div className="max-w-6xl mx-auto bg-mine-shaft-800 rounded-2xl shadow-lg p-12">
+        <div className="grid md:grid-cols-2 items-center gap-12">
+          {/* Left: Text */}
+          <div className="md:text-left">
+            <h2 className="text-5xl font-bold text-white leading-tight text-center">
               Never Wants to Miss <br />
               Any <span className="text-bright-sun-400">Job News?</span>
             </h2>
           </div>
-          <div className="flex-shrink-0">
-            <div className="flex items-center bg-mine-shaft-700 rounded-lg p-1.5">
+
+          {/* Right: Form */}
+          <div>
+            <div className="flex items-center justify-between bg-mine-shaft-900 rounded-xl p-4">
               <TextInput
                 placeholder="Your@email.com"
                 variant="unstyled"
-                classNames={{
-                  input: "text-white placeholder-mine-shaft-300 bg-transparent border-none focus:ring-0 w-64 px-2",
-                }}
+                size="xl"
+                className= "[&_input]:!text-mine-shaft-100 [&_input]:!placeholder:text-mine-shaft-400"
               />
               <Button
-                className="bg-bright-sun-400 text-mine-shaft-900 hover:bg-bright-sun-500 rounded-md font-semibold"
-                size="sm"
+                className="!rounded-lg font-bold"
+                size="lg"
+                color="brightSun.4"
               >
                 Subscribe
               </Button>
